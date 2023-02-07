@@ -1,0 +1,14 @@
+{
+  "name": "inglescomsophia",
+  "version": "1.0.0",
+  "description": "Landing  page para ingles com sophia",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css --watch"
+  },
+  "author": "Ronald",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

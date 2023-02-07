@@ -1,0 +1,166 @@
+:root {
+  --step--2: clamp(0.78rem, calc(0.69rem + 0.46vw), 1.12rem);
+  --step--1: clamp(0.94rem, calc(0.81rem + 0.63vw), 1.4rem);
+  --step-0: clamp(1.13rem, calc(0.96rem + 0.85vw), 1.75rem);
+  --step-1: clamp(1.35rem, calc(1.12rem + 1.14vw), 2.19rem);
+  --step-2: clamp(1.62rem, calc(1.32rem + 1.51vw), 2.73rem);
+  --step-3: clamp(1.94rem, calc(1.54rem + 2vw), 3.42rem);
+  --step-4: clamp(2.33rem, calc(1.81rem + 2.63vw), 4.27rem);
+  --step-5: clamp(2.8rem, calc(2.11rem + 3.45vw), 5.34rem);
+  --space-3xs: clamp(0.31rem, calc(0.29rem + 0.1vw), 0.38rem);
+  --space-2xs: clamp(0.56rem, calc(0.48rem + 0.41vw), 0.81rem);
+  --space-xs: clamp(0.88rem, calc(0.77rem + 0.51vw), 1.19rem);
+  --space-s: clamp(1.13rem, calc(0.98rem + 0.71vw), 1.56rem);
+  --space-m: clamp(1.69rem, calc(1.46rem + 1.12vw), 2.38rem);
+  --space-l: clamp(2.25rem, calc(1.96rem + 1.43vw), 3.13rem);
+  --space-xl: clamp(3.38rem, calc(2.95rem + 2.14vw), 4.69rem);
+  --space-2xl: clamp(4.5rem, calc(3.93rem + 2.86vw), 6.25rem);
+  --space-3xl: clamp(6.75rem, calc(5.89rem + 4.29vw), 9.38rem);
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.31rem, calc(0.15rem + 0.82vw), 0.81rem);
+  --space-2xs-xs: clamp(0.56rem, calc(0.36rem + 1.02vw), 1.19rem);
+  --space-xs-s: clamp(0.88rem, calc(0.65rem + 1.12vw), 1.56rem);
+  --space-s-m: clamp(1.13rem, calc(0.72rem + 2.04vw), 2.38rem);
+  --space-m-l: clamp(1.69rem, calc(1.22rem + 2.35vw), 3.13rem);
+  --space-l-xl: clamp(2.25rem, calc(1.45rem + 3.98vw), 4.69rem);
+  --space-xl-2xl: clamp(3.38rem, calc(2.44rem + 4.69vw), 6.25rem);
+  --space-2xl-3xl: clamp(4.5rem, calc(2.91rem + 7.96vw), 9.38rem);
+  /* Custom pairs */
+  --space-xs-l: clamp(0.88rem, calc(0.14rem + 3.67vw), 3.13rem);
+  --space-s-l: clamp(1.13rem, calc(0.47rem + 3.27vw), 3.13rem);
+  --space-s-xl: clamp(1.13rem, calc(-0.04rem + 5.82vw), 4.69rem);
+  --space-l-3xl: clamp(2.25rem, calc(-0.08rem + 11.63vw), 9.38rem); }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+body::-webkit-scrollbar {
+  display: none; }
+
+body {
+  overflow-x: hidden;
+  font-size: var(--step--1); }
+
+a {
+  color: inherit; }
+
+ul {
+  list-style: none; }
+
+.btn {
+  width: 10rem;
+  height: 2rem; }
+
+.primary-navigation {
+  list-style: none;
+  margin: 0;
+  padding-top: 5rem;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff; }
+  .primary-navigation a {
+    text-decoration: none; }
+
+.mobile-nav-toggle {
+  display: none; }
+
+@media (max-width: 35em) {
+  .primary-navigation {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    padding: Min(30vh, 10rem), 2em;
+    background-image: url(../img/wave.svg);
+    background-size: cover;
+    background-position: center;
+    transform: translateX(100%);
+    transition: transform 350ms ease-in-out; }
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0%); }
+  .primary-navigation li {
+    margin-left: 25%; }
+  .mobile-nav-toggle {
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    background-image: url(../img/menu.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0;
+    width: 2rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem; }
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url(../img/icon-close.svg); } }
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  background-color: #017ef3; }
+
+.benefits {
+  display: grid; }
+
+.about {
+  display: grid;
+  height: 80vh;
+  text-align: center; }
+
+.flex {
+  display: flex;
+  gap: 3rem; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.u-grid-column-1--1 {
+  grid-column: 1 / -1; }
+
+.u-grid-column-lefthalf {
+  grid-column: 1 / 7; }
+
+.u-grid-column-righthalf {
+  grid-column: 7 / 12; }
+
+.u-grid-column-1-10 {
+  grid-column: 1 / 10; }
+
+.u-text-margin-sl {
+  margin-left: var(--space-s-l);
+  margin-right: var(--space-s-l); }
+
+.u-padding-section {
+  padding-top: var(--space-l-3xl);
+  padding-bottom: var(--space-l-3xl); }
+
+.heading-1 {
+  font-family: "Lora", serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: var(--step-3); }
+
+.heading-2 {
+  font-family: "Lora", serif;
+  font-size: var(--step-1);
+  font-weight: 400; }
+
+.paragraph-1 {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff; }
+
+.paragraph-2 {
+  font-family: "Montserrat", sans-serif; }
