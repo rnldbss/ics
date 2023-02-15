@@ -130,8 +130,7 @@ ul {
 
 .about {
   display: grid;
-  height: 80vh;
-  text-align: center; }
+  height: 80vh; }
 
 .flex {
   display: flex;
