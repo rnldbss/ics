@@ -45,7 +45,7 @@ body {
   overflow-x: hidden;
   font-size: var(--step--1);
   background-color: #fff;
-  margin: var(--space-s); }
+  margin: var(--space-xs); }
 
 a {
   color: inherit; }
@@ -106,7 +106,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 91%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 104%, 0% 100%);
   background-color: #ecf3f9; }
   .hero__img {
     grid-row: 2 / 3;
@@ -118,11 +118,15 @@ ul {
     grid-row: 2 / 3; }
 
 .benefits {
-  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-s);
+  padding: var(--space-s);
   background-color: #4d4dff;
-  clip-path: polygon(0% 0%, 100% 9%, 100% 100%, 0% 100%); }
+  clip-path: polygon(0% 0%, 100% 6%, 100% 100%, 0% 94%); }
   .benefits__card {
-    background-color: grey; }
+    background-color: whitesmoke;
+    border-radius: 15px; }
 
 .about {
   display: grid;
@@ -161,6 +165,9 @@ ul {
 
 .u-grid-column-5-9 {
   grid-column: 5 / 9; }
+
+.u-margin-sl {
+  margin-left: var(--space-s-l); }
 
 .u-leftmargin-sl {
   margin-left: var(--space-s-l); }
